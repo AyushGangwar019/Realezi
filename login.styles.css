@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'Familjen Grotesk', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+
+.background-image{
+    width: 100%;
+    height: 100%;
+}
+.logo_container {
+    position: absolute;
+    top: 8%;
+    left: 18%;
+    transform: translateY(10px); 
+    opacity: 0; 
+    color: white;
+    animation: fadeInTranslate 2s ease-out forwards; 
+}
+
+@keyframes fadeInTranslate {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.logo{
+    width: 15rem;
+}
+.logo_text{
+    font-size: 1.3rem;
+    margin: 20px 0px;
+}
+
+#click_connect{
+    margin-bottom: 30px;
+    font-size: 2.1rem;
+}
+
+.imagecontainer{
+    position: absolute;
+    top: 42%;
+    left: 7%;
+}
+.imagecontainer .iphone{
+    width: 45%;
+}
+
+.iphone{
+    animation: upAndDown 2s ease-in-out 1s infinite alternate;
+}
+
+@keyframes upAndDown {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(5px);
+    }
+    to{
+        transform: translateY(-10px);
+    }
+}
+
+.number_input_container{
+    position: absolute;
+    /* border: 4px solid white; */
+    width: 28vw;
+    top: 25%;
+    left: 60%;
+    color: white;
+    animation: fadeOTPContainer 2s ease-out forwards;
+}
+
+@keyframes fadeOTPContainer {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.number_input_container p{
+    font-size: 1.5rem;
+    margin-left: 10px;
+    margin-bottom: 25px;
+}
+
+.resend_container a{ 
+    text-decoration: none;
+    color: #EC7100;
+    margin-left: 5px;
+}
+
+.number_input_container input{
+    width: 100%;
+    height: 55px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.number_input::placeholder{
+    color: rgba(166, 166, 166, 0.612);
+    font-size: 1rem;
+}
+
+.resend_container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+    padding-right: 1px;
+}
+
+.resend{
+    font-size: 0.85rem !important;
+}
+
+.number_input_container button{
+    width: 100%;
+    height: 55px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 5px;
+    background-color: #407BFF;
+}
+.number_input_container button:hover{
+    background-color: #1a5be6;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1270px) and (orientation: landscape){
+    .logo_container {
+        top: 20%;
+        left: 10%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .logo {
+        width: 20rem;
+    }
+    .logo_text {
+        font-size: 1.6rem;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    #click_connect{
+        margin: 20px 0px 30px 0px; 
+        font-size: 2.5rem;
+    }
+    .number_input_container {
+        width: 47vw;
+        top: 30%;
+        left: 50%;
+        z-index: 10;
+        transform: translateX(-40%);
+    }
+    .pre_input_text{
+        font-size: 1.5rem !important;
+        margin-left: 25px !important;
+       }
+
+    .imagecontainer {
+        width: 55vw;
+        top: 15%;
+        z-index: 1;
+        left: 43%;
+    }
+
+    .iphone{
+        width: 120% !important;
+        height: 100%;
+        filter: brightness(80%);
+    }
+}
+
+@media screen and (max-width: 780px) and (orientation: landscape) {
+    .logo_container {
+        top: 10%;
+        left: 8%;
+    }
+
+    .logo {
+        width: 10rem;
+    }
+
+    .logo_text {
+        font-size: 1.2rem;
+        margin: auto;
+        margin-bottom: 20px ;
+    }
+
+    #click_connect{
+        margin-bottom: 30px;
+        font-size: 1.7rem;
+    }
+
+    .number_input_container {
+        width: 47vw;
+        top: 15%;
+        left: 46%;
+        z-index: 10;
+        transform: translateX(-40%);
+    }
+
+    .pre_input_text{
+        font-size: 1rem !important;
+        margin-left: 25px !important;
+       }
+
+    .resend_container{
+        margin-top: 10px;
+        padding-right: 1px;
+    }
+
+    .imagecontainer {
+        width: 50vw;
+        top: 8%;
+        z-index: 1;
+        left: 40%;
+    }
+
+    .iphone{
+        width: 120% !important;
+        height: 100%;
+        filter: brightness(80%);
+    }
+} 
+
+@media screen and (max-width: 480px) {
+    .logo_container {
+        overflow: hidden;
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0px 15%;
+        position: absolute;
+        transform: translateY(10px); 
+        opacity: 0; 
+        z-index: 10;
+        left: 0;
+        top: 10%;
+    }
+    
+    .logo {
+        width: 12rem;
+        margin-bottom: 30px;
+        margin-left: 10%;
+    }
+
+    .logo_text {
+        font-size: 1.2rem;
+        margin: auto;
+        margin-bottom: 20px ;
+    }
+
+    #click_connect{
+        margin-bottom: 20px !important;
+        font-size: 1.7rem;
+    }
+
+    .number_input_container {
+        width: 80vw;
+        z-index: 10;
+        top: 55%;
+        left: 10%;
+    }
+
+    .resend_container{
+        margin-top: 10px;
+        padding-right: 1px;
+    }
+
+    .imagecontainer {
+        width: 100vw;
+        top: 40%;
+        z-index: 1;
+        left: -5%;
+    }
+
+    .iphone{
+        width: 120% !important;
+        height: 100%;
+        filter: brightness(60%);
+    }
+
+    .number_input_container p {
+        font-size: 0.9rem;
+        margin-left: 10%;
+    }
+
+    .number_input_container input {
+        height: 40px;
+    }
+
+    .number_input_container button {
+        height: 40px;
+        margin-top: -10px;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.styles.css">
+</head>
+<body>
+    <section class="container">
+        <img class="background-image" src="/Assets/login_background.png" alt="">
+        <!-- Logo container -->
+        <div class="logo_container">
+            <img class="logo" src="./Assets/logo.png" alt="Logo" class="logo">
+            <p id="click_connect" class="logo_text">Click.Connect.Close</p>
+            <p class="logo_text">Post you property ad for free</p>
+            <p class="logo_text">Post you property ad for free</p>
+            <p class="logo_text">Post you property ad for free</p>
+        </div>
+
+        <!-- Image container with background -->
+        <div class="imagecontainer">
+            <img class="iphone" src="./Assets/login_iphone.png" alt="iPhone Image">
+        </div>
+
+        <div class="number_input_container">
+            <p class="pre_input_text">Login</p>
+            <input class="number_input" type="number" placeholder="Enter Mobile number">
+            <button id="continueButton">Continue</button>
+            <div class="resend_container"><p class="resend">Not registered yet? <a href="#">Register Now</a></p></div>
+        </div>
+    </section>
+    <script>
+        document.getElementById('continueButton').addEventListener('click', function() {
+            window.location.href = 'otp.html';
+        });
+    </script>
+
+</body>
+</html>
